@@ -1,0 +1,107 @@
+== STEP 4: PUSH TO GHCR ==
+2026-11-02T12:45:10Z
+The push refers to repository [ghcr.io/2500it10003/vlsc-s05-api]
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Waiting
+6a7715fc79a2: Waiting
+25f1d6b1951a: Waiting
+57988d149f4b: Waiting
+44136fa355b3: Already exists
+6a7715fc79a2: Layer already exists
+25f1d6b1951a: Layer already exists
+55bfaf18bc3e: Waiting
+c8b6d93b6510: Waiting
+4e0ee5326208: Waiting
+c8b6d93b6510: Waiting
+4e0ee5326208: Waiting
+57988d149f4b: Waiting
+55bfaf18bc3e: Waiting
+c8b6d93b6510: Waiting
+4e0ee5326208: Waiting
+57988d149f4b: Waiting
+55bfaf18bc3e: Waiting
+55bfaf18bc3e: Waiting
+c8b6d93b6510: Waiting
+4e0ee5326208: Waiting
+55bfaf18bc3e: Waiting
+c8b6d93b6510: Waiting
+4e0ee5326208: Waiting
+4e0ee5326208: Waiting
+57988d149f4b: Pushed
+380d83cb3ebe: Waiting
+380d83cb3ebe: Waiting
+c8b6d93b6510: Pushed
+5da1be9c59b4: Waiting
+380d83cb3ebe: Waiting
+5da1be9c59b4: Waiting
+380d83cb3ebe: Waiting
+4e0ee5326208: Pushed
+380d83cb3ebe: Waiting
+5da1be9c59b4: Waiting
+5da1be9c59b4: Waiting
+380d83cb3ebe: Waiting
+5da1be9c59b4: Waiting
+5da1be9c59b4: Waiting
+380d83cb3ebe: Pushed
+5da1be9c59b4: Pushed
+55bfaf18bc3e: Pushed
+1.0.0: digest: sha256:917b1f9994e40abada35ca9bf938c70d96019c94517565a2718f0b30860ae728 size: 856
+--- registry manifest ---
+Name:      ghcr.io/2500it10003/vlsc-s05-api:1.0.0
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:917b1f9994e40abada35ca9bf938c70d96019c94517565a2718f0b30860ae728
+           
+Manifests: 
+  Name:        ghcr.io/2500it10003/vlsc-s05-api:1.0.0@sha256:929abcc58f3cffa280fce2b8203f383a2124dee7460e6983d2859578ad5f4ae1
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+               
+  Name:        ghcr.io/2500it10003/vlsc-s05-api:1.0.0@sha256:64fd1706bca543f2fc54bf4a941d6299471960f52a1e4bfc8ee61239f5549453
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest: sha256:929abcc58f3cffa280fce2b8203f383a2124dee7460e6983d2859578ad5f4ae1
+    vnd.docker.reference.type:   attestation-manifest
+DIGEST=sha256:917b1f9994e40abada35ca9bf938c70d96019c94517565a2718f0b30860ae728
+--- anonymous pull ---
+1.0.0: Pulling from 2500it10003/vlsc-s05-api
+Digest: sha256:917b1f9994e40abada35ca9bf938c70d96019c94517565a2718f0b30860ae728
+Status: Image is up to date for ghcr.io/2500it10003/vlsc-s05-api:1.0.0
+ghcr.io/2500it10003/vlsc-s05-api:1.0.0
+ANON_PULL=OK

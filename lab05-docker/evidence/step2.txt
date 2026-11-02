@@ -1,0 +1,122 @@
+== STEP 2: SIZE PROOF ==
+2026-11-02T12:33:09Z
+--- building SINGLE-stage ---
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.single
+#1 transferring dockerfile: 368B done
+#1 DONE 0.0s
+
+#2 [auth] library/node:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20
+#3 DONE 1.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 137B done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/node:20@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5
+#5 resolve docker.io/library/node:20@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 6.81kB done
+#6 DONE 0.0s
+
+#7 [2/4] WORKDIR /app
+#7 CACHED
+
+#8 [3/4] COPY . .
+#8 DONE 0.6s
+
+#9 [4/4] RUN apt-get update   && apt-get install -y --no-install-recommends build-essential python3 git   && npm install   && npm run build
+#9 3.241 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#9 3.288 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#9 3.288 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#9 3.906 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+#9 4.046 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#9 4.199 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [360 kB]
+#9 5.032 Fetched 9398 kB in 2s (5034 kB/s)
+#9 5.032 Reading package lists...
+#9 6.023 Reading package lists...
+#9 6.818 Building dependency tree...
+#9 6.988 Reading state information...
+#9 7.287 python3 is already the newest version (3.11.2-1+b1).
+#9 7.287 python3 set to manually installed.
+#9 7.287 git is already the newest version (1:2.39.5-0+deb12u3).
+#9 7.287 The following NEW packages will be installed:
+#9 7.288   build-essential
+#9 7.369 0 upgraded, 1 newly installed, 0 to remove and 107 not upgraded.
+#9 7.369 Need to get 7704 B of archives.
+#9 7.369 After this operation, 20.5 kB of additional disk space will be used.
+#9 7.369 Get:1 http://deb.debian.org/debian bookworm/main amd64 build-essential amd64 12.9 [7704 B]
+#9 8.414 debconf: delaying package configuration, since apt-utils is not installed
+#9 8.456 Fetched 7704 B in 0s (101 kB/s)
+#9 8.823 Selecting previously unselected package build-essential.
+#9 8.823 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23258 files and directories currently installed.)
+#9 9.525 Preparing to unpack .../build-essential_12.9_amd64.deb ...
+#9 9.537 Unpacking build-essential (12.9) ...
+#9 9.672 Setting up build-essential (12.9) ...
+#9 17.10 
+#9 17.10 added 82 packages, and audited 83 packages in 3s
+#9 17.11 
+#9 17.11 18 packages are looking for funding
+#9 17.11   run `npm fund` for details
+#9 17.11 
+#9 17.11 found 0 vulnerabilities
+#9 17.11 npm notice
+#9 17.11 npm notice New major version of npm available! 10.8.2 -> 12.2.1
+#9 17.11 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+#9 17.11 npm notice To update run: npm install -g npm@12.2.1
+#9 17.11 npm notice
+#9 17.33 
+#9 17.33 > vlsc-s05-api@1.0.0 build
+#9 17.33 > tsc -p tsconfig.json
+#9 17.33 
+#9 DONE 20.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 2.2s done
+#10 exporting manifest sha256:befdb0dc4eaafee47c514c9851a37068e58c28bbb43cc6346ffd6be4e9bf9b8e 0.0s done
+#10 exporting config sha256:55f812c2c4b057db059a10ce844e5780f4867867ac2c994c2d80d4b28c023fae 0.0s done
+#10 exporting attestation manifest sha256:dd38eff8b9ad02974a444f3ffe378d3c7668afe0f79324b7956aac9ef644b549 0.0s done
+#10 exporting manifest list sha256:f4416e44fca137302dfb0dd75cbac2e5a7e8bc30ac40c4c5e07f2d77f6eb2eac 0.0s done
+#10 naming to docker.io/library/vlsc-s05:single done
+#10 unpacking to docker.io/library/vlsc-s05:single
+#10 unpacking to docker.io/library/vlsc-s05:single 0.9s done
+#10 DONE 3.2s
+
+real	0m25.704s
+user	0m0.173s
+sys	0m0.105s
+--- sizes ---
+TAG       SIZE      IMAGE ID
+single    1.66GB    f4416e44fca1
+multi     147MB     381f91d83d7d
+test2     147MB     381f91d83d7d
+test1     162MB     8609098085f6
+test3     162MB     6a18679a3033
+single_bytes=1663138543
+multi_bytes=147248301
+--- layer breakdown (multi) ---
+IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
+381f91d83d7d   7 minutes ago   CMD ["node" "dist/server.js"]                   0B        buildkit.dockerfile.v0
+<missing>      7 minutes ago   HEALTHCHECK &{["CMD-SHELL" "node -e \"requir…   0B        buildkit.dockerfile.v0
+<missing>      7 minutes ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0
+<missing>      7 minutes ago   USER app                                        0B        buildkit.dockerfile.v0
+<missing>      7 minutes ago   COPY --chown=app:app /app/dist ./dist # buil…   16.4kB    buildkit.dockerfile.v0
+<missing>      7 minutes ago   COPY --chown=app:app /app/node_modules ./nod…   4.71MB    buildkit.dockerfile.v0
+<missing>      7 minutes ago   COPY --chown=app:app /app/package.json ./pac…   12.3kB    buildkit.dockerfile.v0
+<missing>      7 minutes ago   ENV NODE_ENV=production PORT=3000               0B        buildkit.dockerfile.v0
+<missing>      7 minutes ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
+<missing>      7 minutes ago   COPY /usr/local/bin/node /usr/local/bin/node…   90MB      buildkit.dockerfile.v0
+<missing>      4 hours ago     RUN |2 STUDENT_ID=2500IT10003 SOURCE_URL=htt…   2.94MB    buildkit.dockerfile.v0
+<missing>      4 hours ago     LABEL org.opencontainers.image.source=https:…   0B        buildkit.dockerfile.v0
+<missing>      4 hours ago     ARG SOURCE_URL=                                 0B        buildkit.dockerfile.v0
+<missing>      4 hours ago     ARG STUDENT_ID=UNSET                            0B        buildkit.dockerfile.v0
+<missing>      6 months ago    CMD ["/bin/sh"]                                 0B        buildkit.dockerfile.v0
+<missing>      6 months ago    ADD alpine-minirootfs-3.20.10-x86_64.tar.gz …   8.47MB    buildkit.dockerfile.v0
+R = 11.3 (single=1663138543 B, multi=147248301 B)

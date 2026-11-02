@@ -1,0 +1,25 @@
+=== VLSC SESSION 05 AUDIT ===
+utc=2026-11-02T13:10:31Z
+student=2500IT10003 github_user=2500IT10003 codespace=turbo-space-goldfish-6v966wj75wrw25w95
+host=Linux 6.8.0-1064-azure x86_64
+image=ghcr.io/2500it10003/vlsc-s05-api:1.0.0
+render_url=https://vlsc-s05-2500it10003.onrender.com
+[PASS] ZT-1 running in Codespaces :: CODESPACES=true
+[PASS] Docker engine reachable :: docker info
+[PASS] Multi-stage Dockerfile (builder + runner) :: FROM count=2
+[PASS] .dockerignore present :: node_modules excluded
+[PASS] Single-stage baseline > 1 GB :: bytes=1663138543
+[PASS] Multi-stage image < 150 MB :: bytes=147248301
+reduction_factor=11.3
+[PASS] Architecture linux/amd64 :: arch=amd64
+[PASS] Non-root user :: user=app
+[PASS] HEALTHCHECK defined :: present
+[PASS] Student label matches (ZT-4) :: label=2500IT10003
+[PASS] Semantic version tag, not latest (ZT-5) :: tag=1.0.0
+[PASS] Digest exists in GHCR :: digest=sha256:917b1f9994e40abada35ca9bf938c70d96019c94517565a2718f0b30860ae728
+[PASS] Anonymous pull from GHCR :: public package
+[PASS] PaaS /health returns 200 :: http=200
+[PASS] PaaS env injection (studentId, appEnv) :: {"service":"vlsc-s05-api","appEnv":"production","studentId":"2500IT10003","hostname":"srv-dbk7d3tg1s2s739hbdj0-hibernate-6746b4f6f8-c5xsb","arch":"x64","platform":"linux","nodeVersion":"v20.20.2","uptimeSeconds":103}
+[PASS] No token strings in workspace (ZT-2) :: scan complete
+[PASS] Evidence files step1-step5 present :: evidence/
+=== SUMMARY: pass=17 fail=0 RESULT=PASS ===
