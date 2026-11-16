@@ -12,6 +12,9 @@ COPY package.json ./
 COPY src ./src
 ARG GIT_SHA=unknown
 ENV GIT_SHA=${GIT_SHA}
+# npm is not needed at runtime and bundles a vulnerable tar
+RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+
 USER node
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
