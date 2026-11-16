@@ -1,0 +1,34 @@
+=== LAB 06 AUTOMATED AUDIT : 2026-11-16T09:49:28Z ===
+[PASS] Branch is main
+[PASS] Workflow file exists (../.github/workflows/deploy.yml)
+[PASS] Every job declares timeout-minutes
+[PASS] Pipeline uses needs: gating
+[PASS] No hard-coded secrets in repository
+[PASS] Secrets are referenced via secrets context
+[PASS] Git history contains >= 4 commits
+[PASS] History contains a revert (no force-push)
+[PASS] Latest run on main is green (exit 0)
+[PASS] At least one blocked run (chaos evidence)
+[PASS] Live /healthz returns HTTP 200
+[PASS] Live commit equals origin/main HEAD
+
+--- git log (last 8) ---
+50e8210 Revert "test: chaos injection - expect HTTP 500 (intentional failure)"
+6c22df0 test: chaos injection - expect HTTP 500 (intentional failure)
+fc024ac fix: remove npm from runtime image (CVE-2026-59873 in bundled tar)
+4deb7ee ci: add setup-buildx so the gha cache export works
+d72ebdb ci: use RENDER_DEPLOY_HOOK_URL secret name
+fc5a582 ci: update trivy-action to v0.36.0 (0.28.0 tag no longer exists)
+756a505 ci: add CI/CD pipeline (lint, test, audit, package, deploy)
+ffb1048 feat: complete Lab 05 Dockerfiles and evidence
+--- gh run list (last 6) ---
+completed	success	Revert "test: chaos injection - expect HTTP 500 (intentional failure)"	CI-CD Pipeline	main	push	43842121785	1m34s	2026-11-16T09:42:14Z
+completed	failure	test: chaos injection - expect HTTP 500 (intentional failure)	CI-CD Pipeline	main	push	43840874966	18s	2026-11-16T09:33:54Z
+completed	success	fix: remove npm from runtime image (CVE-2026-59873 in bundled tar)	CI-CD Pipeline	main	push	43832302559	11s	2026-11-16T09:24:51Z
+completed	failure	ci: add setup-buildx so the gha cache export works	CI-CD Pipeline	main	push	43831743029	1m16s	2026-11-16T08:30:18Z
+completed	failure	ci: use RENDER_DEPLOY_HOOK_URL secret name	CI-CD Pipeline	main	push	43831358951	30s	2026-11-16T08:27:29Z
+completed	failure	ci: update trivy-action to v0.36.0 (0.28.0 tag no longer exists)	CI-CD Pipeline	main	push	43829954121	27s	2026-11-16T08:16:48Z
+--- live /api/status ---
+{"service":"vlsc-cicd-lab06","commit":"50e8210356ec2dd1732d932650bc09fecd34f797","node":"v20.20.2"}
+
+RESULT: 12 passed, 0 failed
