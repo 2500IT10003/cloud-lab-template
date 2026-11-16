@@ -134,7 +134,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Container vulnerability scan (Trivy, CRITICAL blocks)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ${{ steps.vars.outputs.image }}:${{ github.sha }}
           format: table
@@ -169,7 +169,7 @@ jobs:
     steps:
       - name: Trigger Render deploy hook
         env:
-          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY }}
           IMAGE_REF: ${{ needs.package.outputs.image }}:${{ github.sha }}
         run: |
           set -euo pipefail
